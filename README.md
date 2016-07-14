@@ -59,7 +59,7 @@ After a memory filter with `M = 5` is applied the density is slightly smoothed:
   <img src="figures/spike_density_M5.png"><br><br>
 </div>
 
-A memory filter with `M = 10` further smooths the trimodal distribution:
+A memory filter with `M = 10` further smooths the trimodal distribution, pushing some of the mass to the 100 ms post-stimulus interval:
 
 <div align="center">
   <img src="figures/spike_density_M10.png"><br><br>
