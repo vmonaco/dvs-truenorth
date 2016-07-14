@@ -93,14 +93,10 @@ Results are obtained using training and testing sets of 1000 samples each. A 2-l
 
 Classification accuracies are first determined for the single frame (spiking probability) samples. The spiking probabilities are classified using the high-precision network. The single-frame spiking probabilities are then convert to a single frame of spikes to determine the classification accuracy on the low-precision network.
 
-<center>
-
 |       | Train | Test  |
-| ----- | ----- | ----- |
+| ----- | ----: | ----: |
 | Proba | 0.960 | 0.874 |
 | Spike | 0.865 | 0.744 |
-
-</center>
 
 Continuous classification is determined using the set of 1000 samples with 100 ms intervals between stimuli. Each sample is approximately 300 ms, for a total of ~400k frames. This corresponds to a runtime of about 400 seconds, or 6.6 minutes, on an NS1e. Frame-level classification accuracy is determined by a maximum vote among the response neurons for the 10 classes. Sample-level classification accuracy is determined by a weighted max vote in which the response neurons from the entire duration of the stimulus are weighted by the number of input spikes. This places greater weight on the responses recorded during greater motion. Both accuracies are determined for values of `M` in [0, 80], where `M = 1` causes the memory filter to produce an exact copy of the original input spikes.
 
@@ -110,14 +106,10 @@ Continuous classification is determined using the set of 1000 samples with 100 m
 
 The highest sample-level accuracy is achieved at `M = 12`. Due to the 100 ms intervals between stimuli, `M` can be slightly increased beyond the optimal value predicted above before the subsequent stimuli are corrupted.
 
-<div align="center">
-
-|        | Original | Memory (`M = 12`) |
-| ------ | -------- | ----------------- |
-| Frame  | 0.206    | 0.573             |
-| Sample | 0.300    | 0.810             |
-
-</div>
+|        | Original | Memory |
+| ------ | -------: | -----: |
+| Frame  | 0.206    | 0.573  |
+| Sample | 0.300    | 0.810  |
 
 Example original and filtered output with running frame classification accuracy:
 
