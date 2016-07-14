@@ -41,25 +41,13 @@ where `M` is the memory duration of the filter. This behavior is achieved by set
 
 The memory neurons are arranged in a single layer between the DVS and the classifier, with one-to-one synaptic connections between the DVS, memory layer, and the first layer of the classifier.
 
-As an example, consider the spikes induced by a single stimulus (the digit "0", followed by a 100 ms interval):
-
-<div align="center">
-  <img src="figures/spike_density_M0.gif"><br><br>
-</div>
-
-Binned into 1 ms windows, corresponding the clock period of TrueNorth, relatively few spikes are ever jointly observed. After a filter is applied with `M = 10`, the spikes from the stimulus persist long enough for the entire image to be viewed at several time steps:
+As an example, consider the spikes induced by a single stimulus (the digit "0", followed by a 100 ms interval), shown below on the left. Binned into 1 ms windows, corresponding the clock period of TrueNorth, relatively few spikes are ever jointly observed. After a filter is applied with `M = 10`, the spikes from the stimulus persist long enough for the entire image to be viewed at several time steps, shown on the right.
 
 <div align="center">
   <img src="figures/spike_density_M0.gif"><img src="figures/spike_density_M10.gif"><br><br>
 </div>
 
-As `M` increases, the spike probability saturates the duration of the stimulus and begins to corrupt the subsequent interval when no stimulus is present (and eventually, when the next stimulus appears):
-
-<div align="center">
-  <img src="figures/spike_density_M40.gif"><br><br>
-</div>
-
-This effect is confirmed by the spike density over time, begining at time 0 when the stimulus is first presented. Over 1000 samples, the original spike density is given by:
+As `M` increases, the spike probability saturates the duration of the stimulus and begins to corrupt the subsequent interval when no stimulus is present (and eventually, when the next stimulus appears). This effect is confirmed by the spike density over time, begining at time 0 when the stimulus is first presented. Over 1000 samples, the original spike density is given by:
 
 <div align="center">
   <img src="figures/spike_density_M0.png"><br><br>
@@ -110,12 +98,6 @@ The highest sample-level accuracy is achieved at `M = 12`. Due to the 100 ms int
 | ------ | -------: | -----: |
 | Frame  | 0.206    | 0.573  |
 | Sample | 0.300    | 0.810  |
-
-Example original and filtered output with running frame classification accuracy:
-
-<div align="center">
-  <img src="figures/classify_0.gif"><br><br>
-</div>
 
 ## Steps to reproduce
 
