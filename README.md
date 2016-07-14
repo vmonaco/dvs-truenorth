@@ -50,7 +50,7 @@ As an example, consider the spikes induced by a single stimulus (the digit "0", 
 Binned into 1 ms windows, corresponding the clock period of TrueNorth, relatively few spikes are ever jointly observed. After a filter is applied with `M = 10`, the spikes from the stimulus persist long enough for the entire image to be viewed at several time steps:
 
 <div align="center">
-  <img src="figures/spike_density_M10.gif"><br><br>
+  <img src="figures/spike_density_M0.gif"><img src="figures/spike_density_M10.gif"><br><br>
 </div>
 
 As `M` increases, the spike probability saturates the duration of the stimulus and begins to corrupt the subsequent interval when no stimulus is present (and eventually, when the next stimulus appears):
