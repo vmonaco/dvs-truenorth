@@ -6,7 +6,7 @@ Part of the [2016 Telluride Neuromorphic Cognition Engineering Workshop](http://
 
 A [dynamic vision sensor](http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=4444573) (DVS) is a neuromorphic sensor that produces spikes asynchronously as changes in light are detected in a scene. This allows the DVS to run in an event-driven manner at very low power, producing no output if no changes are detected. In order to detect a non-moving stimulus, such as a static image, some motion in the sensor is required, analogous to how our eyes move to detect a scene.
 
-This projects aims to develop a framework that will enable a frame-based classifier implemented on TrueNorth to recognized static images presented to a DVS. This provides a complete neuromorphic solution to image recognition, leveraging current spike-based classification algorithms. Results are obtained using the N-MNIST dataset, described [here](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4644806/) and available for download [here](http://www.garrickorchard.com/datasets/n-mnist).
+This project aims to develop a framework that will enable a frame-based classifier implemented on TrueNorth to recognized static images presented to a DVS. This provides a complete neuromorphic solution to image recognition, leveraging current spike-based classification algorithms. Results are obtained using the N-MNIST dataset, described [here](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4644806/) and available for download [here](http://www.garrickorchard.com/datasets/n-mnist).
 
 ### Motivation
 
